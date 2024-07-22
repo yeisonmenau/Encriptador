@@ -2,8 +2,9 @@
     --color-fondo: #F5F5F5;
     --color-primario: purple;
     --color-secundario: #DFD7BF;
-    --letra-uno: "inter";
+    --letra-uno: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@
     position: absolute;
     width: 42%;
     height: 60%;
-    left: 12%;
+    left: 8%;
     top: 15%;
     background-color: var(--color-fondo);
     font-family: var(--letra-uno);
@@ -33,6 +34,7 @@
 
 .texto::placeholder{
     color: var(--color-primario);
+    font-family: var(--letra-uno);
 }
 .texto:focus, .texto:active{
     border: none;
@@ -47,7 +49,7 @@
     padding: 0px;
     gap: 8px;
     width: 80%;
-    left: 12%;
+    left: 8%;
     top: 90%;
 }
 
@@ -77,8 +79,9 @@
     align-items: flex-start;
     padding: 1% 0;
     width: 80%;
-    left: 12%;
+    left: 8%;
     top: 93%;
+    gap: 10px;
 }
 
 .btn-encriptar{
@@ -103,7 +106,6 @@
     align-items: center;
     justify-content: center;
     padding: 2%;
-    gap: 10px;
     width: 25%;
     border-radius: 24px;
     font-family: var(--letra-uno);
@@ -115,8 +117,7 @@
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
 }
-.btn-desencriptar:hover,
-.btn-encriptar:hover {
+.btn-desencriptar:hover, .btn-encriptar:hover {
   margin: 0.3%;
   width: 24.5%;
   padding: 1.8%;
