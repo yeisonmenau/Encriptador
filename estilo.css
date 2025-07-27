@@ -1,0 +1,217 @@
+:root{
+    --color-fondo: #ECFFE6;
+    --color-primario: #399918;
+    --letra-uno: "inter";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-fondo);
+}
+
+.texto{
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 8%;
+    top: 8%;
+    background-color: var(--color-fondo);
+    font-family: var(--letra-uno);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    border: none;
+}
+
+.texto::placeholder{
+    color: var(--color-primario);
+    font-family: var(--letra-uno);
+}
+.texto:focus, .texto:active{
+    border: none;
+    outline: none;
+}
+
+.mensaje{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 80%;
+    left: 8.5%;
+    top: 80%;
+}
+
+.mensaje p {
+    font-family: var(--letra-uno);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+#warning_icon{
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.botones{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    width: 80%;
+    left: 8%;
+    top: 82%;
+    gap: 35px;
+}
+
+.btn-encriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 30%;
+    background-color: var(--color-primario);
+    border-radius: 16px;
+    font-family: var(--letra-uno);
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid black;
+}
+.btn-desencriptar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 30%;
+    border-radius: 16px;
+    font-family: var(--letra-uno);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--color-fondo);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+.btn-desencriptar:hover, .btn-encriptar:hover {
+    box-shadow: 0px 24px 32px -8px #495057;
+}
+
+.texto-encriptado{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 65%;
+    top: 5%;
+    background-color: var(--color-fondo);
+    box-shadow: 0px 24px 32px -8px #495057;
+    border-radius: 16px;
+}
+
+.mensaje-encriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.mensaje-encriptado h2{
+    width: 60%;
+    font-family: var(--letra-uno);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-primario);
+}
+
+.mensaje-encriptado p{
+    width: 80%;
+    font-family: var(--letra-uno);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+#muneco{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%; 
+}
+@media screen and (max-width: 57.5em) {
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .mensaje{
+        width: 80%;
+        left: 10%;
+        top: 58%;
+    }
+    .mensaje p{
+        font-size: 16px;
+    }
+    .botones{
+        width: 80%;
+        left: 10%;
+        top: 61.5%;
+    }
+    .btn-encriptar, .btn-desencriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+    .texto-encriptado{
+        position: relative;
+        top: 80%; /* Mover hacia abajo 50px desde su posición original */
+        left: 55px; /* Mover hacia la derecha 100px desde su posición original */
+        width: 85%;
+        height: 25%;
+        
+    }
+    .mensaje-encriptado{
+        width: 100%;
+        top: 5%;
+
+    }
+    #muneco{
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+  }

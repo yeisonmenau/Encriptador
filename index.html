@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="icon" href="./img/logo.png">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="texto-encriptar">
+            <textarea name="texto" id="texto" class="texto" cols="30" rows="10" placeholder="Ingrese su texto aquí"></textarea>
+        </div>
+        <div class="mensaje">
+            <img id="warning_icon" src="./img/warning_icon.png" alt="Cuidado">
+            <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="botones">
+            <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+            <button class="btn-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+        </div>
+        <div class="texto-encriptado">
+            <img src="./img/muneco.png" alt="Muñeco de alura" id="muneco">
+            <div class="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <!-- <textarea name="mensaje" id="mensaje" class="mensaje" cols="30" rows="10" value="disabled"></textarea>-->
+                
+                
+            </div>
+
+        </div>
+    </div>
+        
+</body>
+<script src="index.js"></script>
+</html>
